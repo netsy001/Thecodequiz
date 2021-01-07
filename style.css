@@ -1,0 +1,75 @@
+.head1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    padding-top: 55px;
+    padding-left: 300px;
+    margin-bottom: 1em;
+}
+.head2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    padding-left: 300px;
+    margin-bottom: 2em;
+}
+.btn {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    display: flex;
+    margin-left: 450px;
+    background-color:yellow;
+    border-radius: 15px;  
+}
+.btn1 {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    display: flex;
+    background-color:yellow;
+    border-radius: 25px;  
+    margin-top: 0.2em;
+}
+.index {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.header {
+    background-color: orange;
+    font-weight: bolder;
+}
+#time {
+    margin-left: 20em;
+    border-radius: 5em;
+}
+#q1 {
+    background-color: slateblue;
+    border-radius: 20em;
+}
+#q2 {
+    background-color: slateblue;
+    border-radius: 20em;
+}
+#q3 {
+    background-color: slateblue;
+border-radius: 20em;
+}
+#q4 {
+    background-color: slateblue;
+    border-radius: 20em;
+}
+#q5 {
+    background-color: slateblue;
+    border-radius: 20em;
+}
+#q6 {
+    background-color: slateblue;
+    border-radius: 20em;
+}
+#head {
+    background-color: slateblue;
+    border-radius: 20em;
+}

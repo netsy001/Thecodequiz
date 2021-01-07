@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thecodequiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <marquee behavior="slide" direction="left">The Code Quiz</h1>
+        </marquee>
+
+        <p id="time"></p>
+
+    </header>
+    <section class="container jumbotron" id="head">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 class="head1"><b>Coding quiz challenge</b></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h4 class="head2"> Try to answer the following code related questions within the time limit. keep in
+                    mind that incorrect answers will penalize your score time by ten seconds!</h4>
+            </div>
+        </div>
+        <button class="btn" id="startQuiz">Start Quiz</button>
+        </div>
+    </section>
+
+
+    </section>
+
+    <section class="container jumbotron" id="q1">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <ol>
+                    <p class="index">Q1. How can you get the total number of arguments passed to a function?" </p>
+                    <li>
+                        <input class="btn1 q1" type="button" value="Using args.length property"
+                            onclick="validateAnswer(1, 'Using args.length property');">
+                    </li>
+                    <li>
+                        <input class="btn1 q1" type="button" value="Using arguments.length property"
+                            onclick="validateAnswer(1, 'Using arguments.length property');">
+                    </li>
+                    <li>
+                        <input class="btn1 q1" type="button" value="Both of the above."
+                            onclick="validateAnswer(1, 'Using .length property');">
+                    </li>
+                    <li>
+                        <input class="btn1 q1" type="button" value="None of the above."
+                            onclick="validateAnswer(1, '33 arguments.length property');">
+                    </li>
+                </ol>
+                <span id="q1Result"> </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container jumbotron" id="q2">
+        <div class="row">
+            <div class="col-sm-8">
+                <ol>
+                    <p class="index">Q2. Which built-in method returns the character at the specified index? </p>
+                    <li>
+                        <input class="btn1 q2" type="button" value="characterAt()"
+                            onclick="validateAnswer(2, 'characterAt()');">
+                    </li>
+                    <li>
+                        <input class="btn1 q2" type="button" value="getCharAt()"
+                            onclick="validateAnswer(2, 'getCharAt()');">
+                    </li>
+                    <li>
+                        <input class="btn1 q2" type="button" value="charAt()" onclick="validateAnswer(2, 'charAt()');">
+                    </li>
+                    <li>
+                        <input class="btn1 q2" type="button" value="None of the above."
+                            onclick="validateAnswer(2, 'None of the above.');">
+                    </li>
+                </ol>
+                <span id="q2Result"> </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container jumbotron" id="q3">
+        <div class="row">
+            <div class="col-sm-8">
+                <ol>
+                    <p class="index">Q3. Which built-in method returns the calling string value converted to lower case?
+                    </p>
+                    <li>
+                        <input class="btn1" type="button" value="toLowerCase()"
+                            onclick="validateAnswer(3, 'toLowerCase()');">
+                    </li>
+                    <li>
+                        <input class="btn1" type="button" value="toLower" onclick="validateAnswer(3, 'toLower');">
+                    </li>
+                    <li>
+                        <input class="btn1" type="button" value="changeCase(case)"
+                            onclick="validateAnswer(3, 'changeCase(case)');">
+                    </li>
+                    <li>
+                        <input class="btn1" type="button" value="None of the above."
+                            onclick="validateAnswer(3, 'None of the above.');">
+                    </li>
+                </ol>
+                <span id="q3Result"> </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container jumbotron" id="q4">
+        <div class="row">
+            <div class="col-sm-8">
+            <ol>
+                <p class="index">Q4. Which of the following function of String object combines the text of two strings
+                    and returns a new string? </p>
+                <li>
+                    <input class="btn1" type="button" value="add()" onclick="validateAnswer(4, 'add()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="merge()" onclick="validateAnswer(4, 'merge()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="concat()" onclick="validateAnswer(4, 'concat()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="append()" onclick="validateAnswer(4, 'append()');">
+                </li>
+            </ol>
+            <span id="q4Result"> </span>
+        </div>
+        </div>
+    </section>
+
+    <section class="container jumbotron" id="q5">
+        <div class="row">
+            <div class="col-sm-8">
+            <ol>
+                <p class="index">Q5. Which of the following function of String object returns the index within the
+                    calling String object of the first occurrence of the specified value? </p>
+                <li>
+                    <input class="btn1" type="button" value="Substr()" onclick="validateAnswer(5, 'Substr()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="search()" onclick="validateAnswer(5, 'search()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="lastIndexOf()"
+                        onclick="validateAnswer(5, 'lastIndexOf()');">
+                </li>
+                <li>
+                    <input class="btn1" type="button" value="indexOf()" onclick="validateAnswer(5, 'indexOf()');">
+                </li>
+            </ol>
+            <span id="q5Result"> </span>
+        </div>
+        </div>
+    </section>
+
+    <section class="container jumbotron" id="q6">
+        <div class="row">
+            <div class="col-sm-8">
+            <p class="index">Quiz completed</p>
+            <label for="fname">Full name:</label>
+            <input type="text" id="fname" name="fname">
+            <input class="btn1" type="button" value="submit" onclick="displayScore()">
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
