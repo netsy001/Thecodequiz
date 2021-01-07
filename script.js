@@ -1,3 +1,4 @@
+// diclaring the variables to get the elemnet by ID
 var ele = document.getElementById("q1")
 var ele1 = document.getElementById("q2");
 var ele2 = document.getElementById("q3");
@@ -5,7 +6,7 @@ var ele3 = document.getElementById("q4");
 var ele4 = document.getElementById("q5");
 var ele5 = document.getElementById("q6");
 if (ele) {
-  ele.style.visibility = "hidden";
+  ele.style.visibility = "hidden"; //using visiblity styles to hide by variable name
 }
 if (ele1) {
   ele1.style.visibility = "hidden";
@@ -23,14 +24,14 @@ if (ele5) {
   ele5.style.visibility = "hidden";
 }
 
-var seconds = 60;
+var seconds = 60; // Global variables outside functions to use it for reducing ten seconds for wrong question
   var timer;
-function startQuiz() {
+function startQuiz() {      // function to start the quiz
   q1.style.visibility = "visible";
   document.getElementsByClassName("btn").disabled = true;
   document.getElementById("head").style.visibility = "hidden";
 
-  function myFunction() {
+  function myFunction() {   // function inside a function to start time on click of the startquizbutton.
     if (seconds < 60) { // I want it to say 1:00, not 60
       document.getElementById("time").innerHTML = seconds;
     }
@@ -49,12 +50,12 @@ function startQuiz() {
     document.getElementById("time").innerHTML = "1:00";
   }
 };
-document.getElementById("startQuiz").addEventListener("click", startQuiz);
+document.getElementById("startQuiz").addEventListener("click", startQuiz); //events to start quiz on click
 
 
 
 var score = 0;
-function validateAnswer(questionId, answer) {
+function validateAnswer(questionId, answer) {  //parameters inside function to get correct and wrond answers
   var q1 = document.getElementById("q2");
   var q2 = document.getElementById("q3");
   var q3 = document.getElementById("q4");
@@ -89,12 +90,12 @@ function validateAnswer(questionId, answer) {
       if (answer === expectedAnswer) {
         result.style.color = "green";
         result.innerText = "Correct";
-        score = score + 1;
+        score = score + 1;  //for correct answer adding score by 1
       }
       else {
         result.style.color = "red";
         result.innerText = "Wrong";
-       seconds = seconds - 10;
+       seconds = seconds - 10;  //wrong answer reducing timeby 10 seconds
       }
       document.getElementById("q2").style.visibility = "hidden";
       break;
@@ -159,7 +160,7 @@ function validateAnswer(questionId, answer) {
 function displayScore() {
   var result = document.getElementById("q6").value;  
   var name = document.getElementById("fname").value;
-  if (!name){
+  if (!name){     // condition asking for full name.
     alert("Please enter the Full Name")
     return;
   }
