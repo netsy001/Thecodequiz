@@ -29,7 +29,8 @@ var seconds = 60; // Global variables outside functions to use it for reducing t
 function startQuiz() {      // function to start the quiz
   q1.style.visibility = "visible";
   document.getElementsByClassName("btn").disabled = true;
-  document.getElementById("head").style.visibility = "hidden";
+  $("#head").hide();
+
 
   function myFunction() {   // function inside a function to start time on click of the startquizbutton.
     if (seconds < 60) { // I want it to say 1:00, not 60
@@ -79,7 +80,7 @@ function validateAnswer(questionId, answer) {  //parameters inside function to g
         result.innerText = "Wrong";
         seconds = seconds - 10;
       }
-      document.getElementById("q1").style.visibility = "hidden";
+      $("#q1").hide(2000);
       break;
 
     case 2:
@@ -97,7 +98,7 @@ function validateAnswer(questionId, answer) {  //parameters inside function to g
         result.innerText = "Wrong";
        seconds = seconds - 10;  //wrong answer reducing timeby 10 seconds
       }
-      document.getElementById("q2").style.visibility = "hidden";
+      $("#q2").hide(2000);
       break;
 
     case 3:
@@ -116,7 +117,7 @@ function validateAnswer(questionId, answer) {  //parameters inside function to g
         result.innerText = "Wrong";
        seconds = seconds - 10;
       }
-      document.getElementById("q3").style.visibility = "hidden";
+      $("#q3").hide(2000);
       break;
 
     case 4:
@@ -135,7 +136,7 @@ function validateAnswer(questionId, answer) {  //parameters inside function to g
         result.innerText = "Wrong";
        seconds = seconds - 10;
       }
-      document.getElementById("q4").style.visibility = "hidden";
+      $("#q4").hide(2000);
       break;
 
     case 5:
@@ -153,7 +154,7 @@ function validateAnswer(questionId, answer) {  //parameters inside function to g
         result.innerText = "Wrong";
        seconds = seconds - 10;
       }
-      document.getElementById("q5").style.visibility = "hidden";
+      $("#q5").hide(2000);
       break;
   };
 };
@@ -164,6 +165,6 @@ function displayScore() {
     alert("Please enter the Full Name")
     return;
   }
-  document.getElementById("q6").style.visibility = "hidden";
+  $("#q6").hide(2000);
   alert( name + ' You have answered ' + score + ' questions correctly ');
 };
